@@ -424,8 +424,8 @@ Cliché as it sounds, the future of JS is really bright! The challenge of this s
 
 # Special thanks to Kyle Simpson, @getify
 
-Make sure to go over and check out the (series)[https://github.com/getify/You-Dont-Know-JS], and also if you feel so inclined you can support his work
-on his (patreon)[https://www.patreon.com/getify?ty=h] account. Also visit http://getify.me to sign up for 1 on 1 training with Kyle.
+Make sure to go over and check out the [series](https://github.com/getify/You-Dont-Know-JS), and also if you feel so inclined you can support his work
+on his [patreon](https://www.patreon.com/getify?ty=h) account. Also visit http://getify.me to sign up for 1 on 1 training with Kyle.
 
 # Links to books in the series
 * Read online (free!): ["Up & Going"](up & going/README.md#you-dont-know-js-up--going), Published: [Buy Now](http://shop.oreilly.com/product/0636920039303.do), ebook format is free!
