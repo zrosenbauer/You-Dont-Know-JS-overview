@@ -11,7 +11,7 @@ callback hell.*
 
 # The Overview
 
-- [Scope & Closures](### Chapter1: )
+- [Scope & Closures](#chapter-1-what-is-scope)
 - this & Object Prototypes
 - Types & Grammar
 - Async & Performance
