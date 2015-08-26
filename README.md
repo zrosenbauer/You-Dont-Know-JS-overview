@@ -12,7 +12,7 @@ callback hell.*
 # The Overview
 
 - [Scope & Closures](#chapter-1-what-is-scope)
-- this & Object Prototypes
+- [this & Object Prototypes](#this--object-prototypes)
 - Types & Grammar
 - Async & Performance
 - ES6 & Beyond
