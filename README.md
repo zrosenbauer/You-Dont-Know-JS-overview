@@ -75,7 +75,7 @@ Modules require two key characteristics: 1) an outer wrapping function being inv
 Now we can see closures all around our existing code, and we have the ability to recognize and leverage them to our own benefit!
 
 #### Appendices
-#####[Dynamic Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/apA.md)
+##### [Dynamic Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/apA.md)
 *Quick Snippet*: To be clear, JavaScript does not, in fact, have dynamic scope. It has lexical scope. Plain and simple. But the this mechanism is kind of like dynamic scope.
 
 The key contrast: lexical scope is write-time, whereas dynamic scope (and this!) are runtime. Lexical scope cares where a function was declared, but dynamic scope cares where a function was called from.
