@@ -1,0 +1,8 @@
+title: Youdontknowjs-review
+description: A review of the freaking awesome you don't know JS books series.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-dinky
+
+gems:
+  - jekyll-mentions
