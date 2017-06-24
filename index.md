@@ -1,4 +1,4 @@
-# YouDontKnowJS-review
+# [You-Dont-Know-JS-review](http://zrosenbauer.github.io/You-Dont-Know-JS-review/)
 A quick Overview of the freaking awesome [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS).
 
 ## Overview of the overview
