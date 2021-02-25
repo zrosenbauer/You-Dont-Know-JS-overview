@@ -1,8 +1,8 @@
-# [You-Dont-Know-JS-review](http://zrosenbauer.github.io/You-Dont-Know-JS-review/)
+# [You-Dont-Know-JS-overview](http://zrosenbauer.github.io/You-Dont-Know-JS-overview/)
 A quick Overview of the freaking awesome [You Don't Know JS 1st Edition (book series)](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed).
 
 ## Overview of the overview
-This is meant to be a quick review of everything contained with-in the YDKJS book series. This can be used to quickly review 
+This is meant to be a quick overview of everything contained with-in the YDKJS book series. This can be used to quickly review 
 either certain sections or the entire book. This is a great way for higher level devs to still get the benefits of the series without having 
 to dig through everything (if you're a serious front-end or web developer you should probably read the whole series...unless you know everything all ready!) 
 
