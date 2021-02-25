@@ -1,4 +1,7 @@
 # [You-Dont-Know-JS-overview](http://zrosenbauer.github.io/You-Dont-Know-JS-overview/)
+
+[![License](https://img.shields.io/github/license/zrosenbauer/You-Dont-Know-JS-overview.svg)](LICENSE)
+
 A quick Overview of the freaking awesome [You Don't Know JS 1st Edition (book series)](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed).
 
 ## Overview of the overview
