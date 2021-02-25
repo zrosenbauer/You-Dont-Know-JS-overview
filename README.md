@@ -1,13 +1,12 @@
 # [You-Dont-Know-JS-review](http://zrosenbauer.github.io/You-Dont-Know-JS-review/)
-A quick Overview of the freaking awesome [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS).
+A quick Overview of the freaking awesome [You Don't Know JS 1st Edition (book series)](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed).
 
 ## Overview of the overview
 This is meant to be a quick review of everything contained with-in the YDKJS book series. This can be used to quickly review 
 either certain sections or the entire book. This is a great way for higher level devs to still get the benefits of the series without having 
 to dig through everything (if you're a serious front-end or web developer you should probably read the whole series...unless you know everything all ready!) 
 
-**BIG THANKS** to: Kyle Simpson (@getify) the author of the [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS), *you gave me a Promise...to save me from
-callback hell.*
+**BIG THANKS** to: Kyle Simpson (@getify) the author of the [You Don't Know JS 1st Edition (book series)](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed), *you gave me a Promise...to save me from callback hell.*
 
 # The Overview
 
@@ -19,7 +18,7 @@ callback hell.*
 - [Up & Going](#up--going---intro-level-stuff) - intro level stuff (put at the end...just because)
 
 ## Scope & Closures
-### Chapter 1: [What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch1.md)
+### Chapter 1: [What is Scope?](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch1.md)
 Scope is the set of rules that determines where and how a variable (identifier) can be looked-up. This look-up may be for the purposes of assigning to the variable, which is an LHS (left-hand-side) reference, or it may be for the purposes of retrieving its value, which is an RHS (right-hand-side) reference.
 
 LHS references result from assignment operations. *Scope*-related assignments can occur either with the `=` operator or by passing arguments to (assign to) function parameters.
@@ -34,14 +33,14 @@ Both LHS and RHS reference look-ups start at the currently executing *Scope*, an
 
 Unfulfilled RHS references result in `ReferenceError`s being thrown. Unfulfilled LHS references result in an automatic, implicitly-created global of that name (if not in "Strict Mode" [^note-strictmode]), or a `ReferenceError` (if in "Strict Mode" [^note-strictmode]).
 
-### Chapter 2: [Lexical Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch2.md)
+### Chapter 2: [Lexical Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch2.md)
 Lexical scope means that scope is defined by author-time decisions of where functions are declared. The lexing phase of compilation is essentially able to know where and how all identifiers are declared, and thus predict how they will be looked-up during execution.
 
 Two mechanisms in JavaScript can "cheat" lexical scope: `eval(..)` and `with`. The former can modify existing lexical scope (at runtime) by evaluating a string of "code" which has one or more declarations in it. The latter essentially creates a whole new lexical scope (again, at runtime) by treating an object reference *as* a "scope" and that object's properties as scoped identifiers.
 
 The downside to these mechanisms is that it defeats the *Engine*'s ability to perform compile-time optimizations regarding scope look-up, because the *Engine* has to assume pessimistically that such optimizations will be invalid. Code *will* run slower as a result of using either feature. **Don't use them.**
 
-### Chapter 3: [Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md)
+### Chapter 3: [Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
 Functions are the most common unit of scope in JavaScript. Variables and functions that are declared inside another function are essentially "hidden" from any of the enclosing "scopes", which is an intentional design principle of good software.
 
 But functions are by no means the only unit of scope. Block-scope refers to the idea that variables and functions can belong to an arbitrary block (generally, any `{ .. }` pair) of code, rather than only to the enclosing function.
@@ -54,7 +53,7 @@ Though some seem to believe so, block scope should not be taken as an outright r
 
 NOTE of interest: [Principle of Least Privilege](http://en.wikipedia.org/wiki/Principle_of_least_privilege)
 
-### Chapter 4: [Hoisting](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch4.md)
+### Chapter 4: [Hoisting](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch4.md)
 We can be tempted to look at `var a = 2;` as one statement, but the JavaScript *Engine* does not see it that way. It sees `var a` and `a = 2` as two separate statements, the first one a compiler-phase task, and the second one an execution-phase task.
 
 What this leads to is that all declarations in a scope, regardless of where they appear, are processed *first* before the code itself is executed. You can visualize this as declarations (variables and functions) being "moved" to the top of their respective scopes, which we call "hoisting".
@@ -63,7 +62,7 @@ Declarations themselves are hoisted, but assignments, even assignments of functi
 
 Be careful about duplicate declarations, especially mixed between normal var declarations and function declarations -- peril awaits if you do!
 
-### Chapter 5: [Scope Closure](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md)
+### Chapter 5: [Scope Closure](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch5.md)
 Closure seems to the un-enlightened like a mystical world set apart inside of JavaScript which only the few bravest souls can reach. But it's actually just a standard and almost obvious fact of how we write code in a lexically scoped environment, where functions are values and can be passed around at will.
 
 **Closure is when a function can remember and access its lexical scope even when it's invoked outside its lexical scope.**
@@ -75,14 +74,14 @@ Modules require two key characteristics: 1) an outer wrapping function being inv
 Now we can see closures all around our existing code, and we have the ability to recognize and leverage them to our own benefit!
 
 #### Appendices
-##### [Dynamic Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/apA.md)
+##### [Dynamic Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/apA.md)
 *Quick Snippet*: To be clear, JavaScript does not, in fact, have dynamic scope. It has lexical scope. Plain and simple. But the this mechanism is kind of like dynamic scope.
 
 The key contrast: lexical scope is write-time, whereas dynamic scope (and this!) are runtime. Lexical scope cares where a function was declared, but dynamic scope cares where a function was called from.
 
 Finally: this cares how a function was called, which shows how closely related the this mechanism is to the idea of dynamic scoping. To dig more into this, read the title "this & Object Prototypes".
 
-##### [Polyfilling Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/apB.md)
+##### [Polyfilling Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/apB.md)
 *Quick Snippet*: Let me add one last quick note on the performance of `try/catch`, and/or to address the question, "why not just use an IIFE to create the scope?"
 
 Firstly, the performance of `try/catch` *is* slower, but there's no reasonable assumption that it *has* to be that way, or even that it *always will be* that way. Since the official TC39-approved ES6 transpiler uses `try/catch`, the Traceur team has asked Chrome to improve the performance of `try/catch`, and they are obviously motivated to do so.
@@ -91,20 +90,20 @@ Secondly, IIFE is not a fair apples-to-apples comparison with `try/catch`, becau
 
 The question really becomes: do you want block-scoping, or not. If you do, these tools provide you that option. If not, keep using `var` and go on about your coding!
 
-##### [Lexical-this](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/apC.md) 
+##### [Lexical-this](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/apC.md) 
 *Quick Snippet*: Though this title does not address the this mechanism in any detail, there's one ES6 topic which relates this to lexical scope in an important way, which we will quickly examine.
 
 ES6 adds a special syntactic form of function declaration called the "arrow function". It looks like this:...
 
 ## *this* & Object Prototypes
-### Chapter 1: [`this` Or That?](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch1.md)
+### Chapter 1: [`this` Or That?](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20&%20object%20prototypes/ch1.md)
 `this` binding is a constant source of confusion for the JavaScript developer who does not take the time to learn how the mechanism actually works. Guesses, trial-and-error, and blind copy-n-paste from Stack Overflow answers is not an effective or proper way to leverage *this* important `this` mechanism.
 
 To learn `this`, you first have to learn what `this` is *not*, despite any assumptions or misconceptions that may lead you down those paths. `this` is neither a reference to the function itself, nor is it a reference to the function's *lexical* scope.
 
 `this` is actually a binding that is made when a function is invoked, and *what* it references is determined entirely by the call-site where the function is called.
 
-### Chapter 2: [`this` All Makes Sense Now!](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md)
+### Chapter 2: [`this` All Makes Sense Now!](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch2.md)
 Determining the `this` binding for an executing function requires finding the direct call-site of that function. Once examined, four rules can be applied to the call-site, in *this* order of precedence:
 
 1. Called with `new`? Use the newly constructed object.
@@ -119,7 +118,7 @@ Be careful of accidental/unintentional invoking of the *default binding* rule. I
 
 Instead of the four standard binding rules, ES6 arrow-functions use lexical scoping for `this` binding, which means they adopt the `this` binding (whatever it is) from its enclosing function call. They are essentially a syntactic replacement of `self = this` in pre-ES6 coding.
 
-### Chapter 3: [Objects](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch3.md)
+### Chapter 3: [Objects](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch3.md)
 Objects in JS have both a literal form (such as `var a = { .. }`) and a constructed form (such as `var a = new Array(..)`). The literal form is almost always preferred, but the constructed form offers, in some cases, more creation options.
 
 Many people mistakingly claim "everything in JavaScript is an object", but this is incorrect. Objects are one of the 6 (or 7, depending on your perspective) primitive types. Objects have sub-types, including `function`, and also can be behavior-specialized, like `[object Array]` as the internal label representing the array object sub-type.
@@ -132,7 +131,7 @@ Properties don't have to contain values -- they can be "accessor properties" as 
 
 You can also iterate over **the values** in data structures (arrays, objects, etc) using the ES6 `for..of` syntax, which looks for either a built-in or custom `@@iterator` object consisting of a `next()` method to advance through the data values one at a time.
 
-### Chapter 4: [Mixing (Up) "Class" Objects](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch4.md)
+### Chapter 4: [Mixing (Up) "Class" Objects](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch4.md)
 Classes are a design pattern. Many languages provide syntax which enables natural class-oriented software design. JS also has a similar syntax, but it behaves **very differently** from what you're used to with classes in those other languages.
 
 **Classes mean copies.**
@@ -149,7 +148,7 @@ Explicit mixins are also not exactly the same as class *copy*, since objects (an
 
 In general, faking classes in JS often sets more landmines for future coding than solving present *real* problems.
 
-### Chapter 5: [Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch5.md)
+### Chapter 5: [Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch5.md)
 When attempting a property access on an object that doesn't have that property, the object's internal `[[Prototype]]` linkage defines where the `[[Get]]` operation (see Chapter 3) should look next. This cascading linkage from object to object essentially defines a "prototype chain" (somewhat similar to a nested scope chain) of objects to traverse for property resolution.
 
 All normal objects have the built-in `Object.prototype` as the top of the prototype chain (like the global scope in scope look-up), where property resolution will stop if not found anywhere prior in the chain. `toString()`, `valueOf()`, and several other common utilities exist on this `Object.prototype` object, explaining how all objects in the language are able to access them.
@@ -164,7 +163,7 @@ For a variety of reasons, not the least of which is terminology precedent, "inhe
 
 Instead, "delegation" is a more appropriate term, because these relationships are not *copies* but delegation **links**.
 
-### [Chapter 6: Behavior Delegation](https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes)
+### [Chapter 6: Behavior Delegation](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed/this%20%26%20object%20prototypes)
 Classes and inheritance are a design pattern you can *choose*, or *not choose*, in your software architecture. Most developers take for granted that classes are the only (proper) way to organize code, but here we've seen there's another less-commonly talked about pattern that's actually quite powerful: **behavior delegation**.
 
 Behavior delegation suggests objects as peers of each other, which delegate amongst themselves, rather than parent and child class relationships. JavaScript's `[[Prototype]]` mechanism is, by its very designed nature, a behavior delegation mechanism. That means we can either choose to struggle to implement class mechanics on top of JS (see Chapters 4 and 5), or we can just embrace the natural state of `[[Prototype]]` as a delegation mechanism.
@@ -174,7 +173,7 @@ When you design code with objects only, not only does it simplify the syntax you
 **OLOO** (objects-linked-to-other-objects) is a code style which creates and relates objects directly without the abstraction of classes. OLOO quite naturally implements `[[Prototype]]`-based behavior delegation.
 
 #### Appendices
-##### [ES6 `class`](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/apA.md)
+##### [ES6 `class`](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/apA.md)
 `class` does a very good job of pretending to fix the problems with the class/inheritance design pattern in JS. But it actually does the opposite: **it hides many of the problems, and introduces other subtle but dangerous ones**.
 
 `class` contributes to the ongoing confusion of "class" in JavaScript which has plagued the language for nearly two decades. In some respects, it asks more questions than it answers, and it feels in totality like a very unnatural fit on top of the elegant simplicity of the `[[Prototype]]` mechanism.
@@ -186,7 +185,7 @@ I can't really answer that question for you. But I hope this book has fully expl
 **README authors note:** I still use "classes" but as long as you understand the underlying code then the sugar API goes down a bit sweeter :) ...most likely ES12 or some very future version will "fix" the underlying code
 
 ## Types & Grammar 
-### Chapter 1: [Types](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch1.md)
+### Chapter 1: [Types](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/ch1.md)
 JavaScript has seven built-in *types*: `null`, `undefined`,  `boolean`, `number`, `string`, `object`, `symbol`. They can be identified by the `typeof` operator.
 
 Variables don't have types, but the values in them do. These types define intrinsic behavior of the values.
@@ -197,7 +196,7 @@ JavaScript unfortunately kind of conflates these two terms, not only in its erro
 
 However, the safety guard (preventing an error) on `typeof` when used against an undeclared variable can be helpful in certain cases.
 
-### Chapter 2: [Values](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch2.md)
+### Chapter 2: [Values](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/ch2.md)
 In JavaScript, `array`s are simply numerically indexed collections of any value-type. `string`s are somewhat "`array`-like", but they have distinct behaviors and care must be taken if you want to treat them as `array`s. Numbers in JavaScript include both "integers" and floating-point values.
 
 Several special values are defined within the primitive types.
@@ -208,12 +207,12 @@ The `null` type has just one value: `null`, and likewise the `undefined` type ha
 
 Simple scalar primitives (`string`s, `number`s, etc.) are assigned/passed by value-copy, but compound values (`object`s, etc.) are assigned/passed by reference-copy. References are not like references/pointers in other languages -- they're never pointed at other variables/references, only at the underlying values.
 
-### Chapter 3: [Natives](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch3.md)
+### Chapter 3: [Natives](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/ch3.md)
 JavaScript provides object wrappers around primitive values, known as natives (`String`, `Number`, `Boolean`, etc). These object wrappers give the values access to behaviors appropriate for each object subtype (`String#trim()` and `Array#concat(..)`).
 
 If you have a simple scalar primitive value like `"abc"` and you access its `length` property or some `String.prototype` method, JS automatically "boxes" the value (wraps it in its respective object wrapper) so that the property/method accesses can be fulfilled.
 
-### Chapter 4: [Coercion](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch4.md)
+### Chapter 4: [Coercion](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/ch4.md)
 In this chapter, we turned our attention to how JavaScript type conversions happen, called **coercion**, which can be characterized as either *explicit* or *implicit*.
 
 Coercion gets a bad rap, but it's actually quite useful in many cases. An important task for the responsible JS developer is to take the time to learn all the ins and outs of coercion to decide which parts will help improve their code, and which parts they really should avoid.
@@ -224,7 +223,7 @@ Coercion gets a bad rap, but it's actually quite useful in many cases. An import
 
 Especially for *implicit*, coercion must be used responsibly and consciously. Know why you're writing the code you're writing, and how it works. Strive to write code that others will easily be able to learn from and understand as well.
 
-### Chapter 5: [Grammar](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/ch5.md)
+### Chapter 5: [Grammar](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/ch5.md)
 JavaScript grammar has plenty of nuance that we as developers should spend a little more time paying closer attention to than we typically do. A little bit of effort goes a long way to solidifying your deeper knowledge of the language.
 
 Statements and expressions have analogs in English language -- statements are like sentences and expressions are like phrases. Expressions can be pure/self-contained, or they can have side effects.
@@ -244,7 +243,7 @@ The `finally` clause attached to a `try` (or `try..catch`) offers some very inte
 The `switch` offers some nice shorthand for `if..else if..` statements, but beware of many common simplifying assumptions about its behavior. There are several quirks that can trip you up if you're not careful, but there's also some neat hidden tricks that `switch` has up its sleeve!
 
 #### Appendices
-##### [Mixed Environment JS](https://github.com/getify/You-Dont-Know-JS/blob/master/types%20&%20grammar/apA.md)
+##### [Mixed Environment JS](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/types%20&%20grammar/apA.md)
 We know and can rely upon the fact that the JS language itself has one standard and is predictably implemented by all the modern browsers/engines. This is a very good thing!
 
 But JavaScript rarely runs in isolation. It runs in an environment mixed in with code from third-party libraries, and sometimes it even runs in engines/environments that differ from those found in browsers.
@@ -252,7 +251,7 @@ But JavaScript rarely runs in isolation. It runs in an environment mixed in with
 Paying close attention to these issues improves the reliability and robustness of your code.
 
 ## Async & Performance 
-### Chapter 1: [Asynchrony: Now & Later](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch1.md)
+### Chapter 1: [Asynchrony: Now & Later](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch1.md)
 A JavaScript program is (practically) always broken up into two or more chunks, where the first chunk runs *now* and the next chunk runs *later*, in response to an event. Even though the program is executed chunk-by-chunk, all of them share the same access to the program scope and state, so each modification to state is made on top of the previous state.
 
 Whenever there are events to run, the *event loop* runs until the queue is empty. Each iteration of the event loop is a "tick." User interaction, IO, and timers enqueue events on the event queue.
@@ -263,7 +262,7 @@ Concurrency is when two or more chains of events interleave over time, such that
 
 It's often necessary to do some form of interaction coordination between these concurrent "processes" (as distinct from operating system processes), for instance to ensure ordering or to prevent "race conditions." These "processes" can also *cooperate* by breaking themselves into smaller chunks and to allow other "process" interleaving.
 
-### Chapter 2: [Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch2.md)
+### Chapter 2: [Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch2.md)
 Callbacks are the fundamental unit of asynchrony in JS. But they're not enough for the evolving landscape of async programming as JS matures.
 
 First, our brains plan things out in sequential, blocking, single-threaded semantic ways, but callbacks express asynchronous flow in a rather nonlinear, nonsequential way, which makes reasoning properly about such code much harder. Bad to reason about code is bad code that leads to bad bugs.
@@ -278,14 +277,14 @@ We need a generalized solution to **all of the trust issues**, one that can be r
 
 We need something better than callbacks. They've served us well to this point, but the *future* of JavaScript demands more sophisticated and capable async patterns. The subsequent chapters in this book will dive into those emerging evolutions.
 
-### Chapter 3: [Promises](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch3.md)
+### Chapter 3: [Promises](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch3.md)
 Promises are awesome. Use them. They solve the *inversion of control* issues that plague us with callbacks-only code.
 
 They don't get rid of callbacks, they just redirect the orchestration of those callbacks to a trustable intermediary mechanism that sits between us and another utility.
 
 Promise chains also begin to address (though certainly not perfectly) a better way of expressing async flow in sequential fashion, which helps our brains plan and maintain async JS code better. We'll see an even better solution to *that* problem in the next chapter!
 
-### Chapter 4: [Generators](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch4.md)
+### Chapter 4: [Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch4.md)
 Generators are a new ES6 function type that does not run-to-completion like normal functions. Instead, the generator can be paused in mid-completion (entirely preserving its state), and it can later be resumed from where it left off.
 
 This pause/resume interchange is cooperative rather than preemptive, which means that the generator has the sole capability to pause itself, using the `yield` keyword, and yet the *iterator* that controls the generator has the sole capability (via `next(..)`) to resume the generator.
@@ -296,7 +295,7 @@ The key benefit of generators related to async flow control is that the code ins
 
 In other words, generators preserve a sequential, synchronous, blocking code pattern for async code, which lets our brains reason about the code much more naturally, addressing one of the two key drawbacks of callback-based async.
 
-### Chapter 5: [Program Performance](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch5.md)
+### Chapter 5: [Program Performance](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch5.md)
 The first four chapters of this book are based on the premise that async coding patterns give you the ability to write more performant code, which is generally a very important improvement. But async behavior only gets you so far, because it's still fundamentally bound to a single event loop thread.
 
 So in this chapter we've covered several program-level mechanisms for improving performance even further.
@@ -309,7 +308,7 @@ Finally, asm.js describes a small subset of JavaScript that avoids the hard-to-o
 
 While not covered explicitly in this chapter, there are even more radical ideas under very early discussion for JavaScript, including approximations of direct threaded functionality (not just hidden behind data structure APIs). Whether that happens explicitly, or we just see more parallelism creep into JS behind the scenes, the future of more optimized program-level performance in JS looks really *promising*.
 
-### Chapter 6: [Benchmarking & Tuning](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/ch6.md)
+### Chapter 6: [Benchmarking & Tuning](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/ch6.md)
 Effectively benchmarking performance of a piece of code, especially to compare it to another option for that same code to see which approach is faster, requires careful attention to detail.
 
 Rather than rolling your own statistically valid benchmarking logic, just use the Benchmark.js library, which does that for you. But be careful about how you author tests, because it's far too easy to construct a test that seems valid but that's actually flawed -- even tiny differences can skew the results to be completely unreliable.
@@ -321,7 +320,7 @@ Many common performance tests unfortunately obsess about irrelevant microperform
 Tail call optimization (TCO) is a required optimization as of ES6 that will make some recursive patterns practical in JS where they would have been impossible otherwise. TCO allows a function call in the *tail position* of another function to execute without needing any extra resources, which means the engine no longer needs to place arbitrary restrictions on call stack depth for recursive algorithms.
 
 #### Appendices
-##### [Library: asynquence](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/apA.md)
+##### [Library: asynquence](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/apA.md)
 asynquence is a simple abstraction -- a sequence is a series of (async) steps -- on top of Promises, aimed at making working with various asynchronous patterns much easier, without any compromise in capability.
 
 There are other goodies in the asynquence core API and its contrib plug-ins beyond what we saw in this appendix, but we'll leave that as an exercise for the reader to go check the rest of the capabilities out.
@@ -332,7 +331,7 @@ If these asynquence snippets have made sense to you, you're now pretty well up t
 
 If you're still a little fuzzy on how it works (or why!), you'll want to spend a little more time examining the previous examples and playing around with asynquence yourself, before going on to the next appendix. Appendix B will push asynquence into several more advanced and powerful async patterns.
 
-##### [Advanced Async Patterns](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20&%20performance/apB.md)
+##### [Advanced Async Patterns](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/apB.md)
 Promises and generators provide the foundational building blocks upon which we can build much more sophisticated and capable asynchrony.
 
 asynquence has utilities for implementing iterable sequences, reactive sequences (aka "Observables"), concurrent coroutines, and even CSP goroutines.
@@ -340,7 +339,7 @@ asynquence has utilities for implementing iterable sequences, reactive sequences
 Those patterns, combined with the continuation-callback and Promise capabilities, gives asynquence a powerful mix of different asynchronous functionalities, all integrated in one clean async flow control abstraction: the sequence.
 
 ## ES6 & Beyond
-### Chapter 1: [ES? Now & Future](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch1.md)
+### Chapter 1: [ES? Now & Future](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch1.md)
 ES6 (some may try to call it ES2015) is just landing as of the time of this writing, and it has lots of new stuff you need to learn!
 
 But it's even more important to shift your mindset to align with the new way that JavaScript is going to evolve. It's not just waiting around for years for some official document to get a vote of approval, as many have done in the past.
@@ -351,7 +350,7 @@ Whatever labels that future JavaScript adopts, it's going to move a lot quicker 
 
 If there's any narrative important to understand about the new reality for JavaScript, it's that all JS developers are strongly implored to move from the trailing edge of the curve to the leading edge. And learning ES6 is where that all starts!
 
-### Chapter 2: [Syntax](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch2.md)
+### Chapter 2: [Syntax](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch2.md)
 ES6 adds a heap of new syntax forms to JavaScript, so there's plenty to learn!
 
 Most of these are designed to ease the pain points of common programming idioms, such as setting default values to function parameters and gathering the "rest" of the parameters into an array. Destructuring is a powerful tool for more concisely expressing assignments of values from arrays and nested objects.
@@ -360,7 +359,7 @@ While features like `=>` arrow functions appear to also be all about shorter and
 
 Expanded Unicode support, new tricks for regular expressions, and even a new primitive `symbol` type round out the syntactic evolution of ES6.
 
-### Chapter 3: [Organization](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch3.md)
+### Chapter 3: [Organization](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch3.md)
 ES6 introduces several new features that aid in code organization:
 
 * Iterators provide sequential access to data or operations. They can be consumed by new language features like `for..of` and `...`.
@@ -370,7 +369,7 @@ ES6 introduces several new features that aid in code organization:
 
 These new tools should be your first stop when trying to improve the architecture of your JS projects by embracing ES6.
 
-### Chapter 4: [Async Flow Control](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch4.md)
+### Chapter 4: [Async Flow Control](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch4.md)
 As JavaScript continues to mature and grow in its widespread adoption, asynchronous programming is more and more of a central concern. Callbacks are not fully sufficient for these tasks, and totally fall down the more sophisticated the need.
 
 Thankfully, ES6 adds Promises to address one of the major shortcomings of callbacks: lack of trust in predictable behavior. Promises represent the future completion value from a potentially async task, normalizing behavior across sync and async boundaries.
@@ -379,7 +378,7 @@ But it's the combination of Promises with generators that fully realizes the ben
 
 Right now, we can manage these interactions with the aide of various async libraries' runners, but JavaScript is eventually going to support this interaction pattern with dedicated syntax alone!
 
-### Chapter 5: [Collections](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch5.md)
+### Chapter 5: [Collections](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch5.md)
 ES6 defines a number of useful collections that make working with data in structured ways more efficient and effective.
 
 TypedArrays provide "view"s of binary data buffers that align with various integer types, like 8-bit unsigned integers and 32-bit floats. The array access to binary data makes operations much easier to express and maintain, which enables you to more easily work with complex data like video, audio, canvas data, and so on.
@@ -388,7 +387,7 @@ Maps are key-value pairs where the key can be an object instead of just a string
 
 WeakMaps are maps where the key (object) is weakly held, so that GC is free to collect the entry if it's the last reference to an object. WeakSets are sets where the value is weakly held, again so that GC can remove the entry if it's the last reference to that object.
 
-### Chapter 6: [API Additions](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch6.md)
+### Chapter 6: [API Additions](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch6.md)
 ES6 adds many extra API helpers on the various built-in native objects:
 
 * `Array` adds `of(..)` and `from(..)` static functions, as well as prototype functions like `copyWithin(..)` and `fill(..)`.
@@ -399,7 +398,7 @@ ES6 adds many extra API helpers on the various built-in native objects:
 
 Most of these additions can be polyfilled (see ES6 Shim), and were inspired by utilities in common JS libraries/frameworks.
 
-### Chapter 7: [Meta Programming](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch7.md)
+### Chapter 7: [Meta Programming](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch7.md)
 Meta programming is when you turn the logic of your program to focus on itself (or its runtime environment), either to inspect its own structure or to modify it. The primary value of meta programming is to extend the normal mechanisms of the language to provide additional capabilities.
 
 Prior to ES6, JavaScript already had quite a bit of meta programming capability, but ES6 significantly ramps that up with several new features.
@@ -410,7 +409,7 @@ Feature testing, even for subtle semantic behaviors like Tail Call Optimization,
 
 Should you meta program? My advice is: first focus on learning how the core mechanics of the language really work. But once you fully know what JS itself can do, it's time to start leveraging these powerful meta programming capabilities to push the language further!
 
-### Chapter 8: [Beyond ES6](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20&%20beyond/ch8.md)
+### Chapter 8: [Beyond ES6](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/es6%20&%20beyond/ch8.md)
 If all the other books in this series essentially propose this challenge, "you (may) not know JS (as much as you thought)," this book has instead suggested, "you don't know JS anymore." The book has covered a ton of new stuff added to the language in ES6. It's an exciting collection of new language features and paradigms that will forever improve our JS programs.
 
 But JS is not done with ES6! Not even close. There's already quite a few features in various stages of development for the "beyond ES6" timeframe. In this chapter, we briefly looked at some of the most likely candidates to land in JS very soon.
@@ -419,12 +418,12 @@ But JS is not done with ES6! Not even close. There's already quite a few feature
 
 Cliché as it sounds, the future of JS is really bright! The challenge of this series, and indeed of this book, is incumbent on every reader now. What are you waiting for? It's time to get learning and exploring!
 
-## [Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/master/up%20%26%20going) - intro level stuff
+## [Up & Going](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed/up%20%26%20going) - intro level stuff
 **omitted** because its intro level, if you'd like to take a look follow the link!
 
 # Special thanks to Kyle Simpson, @getify
 
-Make sure to go over and check out the [series](https://github.com/getify/You-Dont-Know-JS), and also if you feel so inclined you can support his work
+Make sure to go over and check out the [series](https://github.com/getify/You-Dont-Know-JS/tree/1st-ed), and also if you feel so inclined you can support his work
 on his [patreon](https://www.patreon.com/getify?ty=h) account. Also visit http://getify.me to sign up for 1 on 1 training with Kyle.
 
 # Links to books in the series
